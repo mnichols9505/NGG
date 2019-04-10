@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\NumberGetter.cs" />
-    <Compile Include="Classes\inputHandler.cs" />
+    <Compile Include="Classes\Game.cs" />
+    <Compile Include="Classes\InputHandler.cs" />
     <Compile Include="Classes\MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

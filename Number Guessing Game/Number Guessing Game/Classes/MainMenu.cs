@@ -10,6 +10,8 @@ namespace Number_Guessing_Game.Classes
     class MainMenu
     {
 
+        
+
         public void Menu()
         {
 
@@ -23,7 +25,7 @@ namespace Number_Guessing_Game.Classes
             Console.WriteLine("Exit");
             choice = Console.ReadLine();
 
-            inputHandler ih = new inputHandler();
+            InputHandler ih = new InputHandler();
             ih.inputValidator(choice);
 
         }
@@ -42,8 +44,22 @@ namespace Number_Guessing_Game.Classes
             Console.WriteLine("Exit");
             choice = Console.ReadLine();
 
-            inputHandler ih = new inputHandler();
+            InputHandler ih = new InputHandler();
             ih.inputValidator(choice);
+
+        }
+
+        public void EndGame(int score)
+        {
+
+            Console.WriteLine("Thanks for playing your score was" + " : " + score);
+            Console.WriteLine("Would you like to play again");
+            Console.WriteLine("Yes or No");
+            string endGame = Console.ReadLine();
+
+            InputHandler ih = new InputHandler();
+            ih.EGValidator(endGame);
+
 
         }
 

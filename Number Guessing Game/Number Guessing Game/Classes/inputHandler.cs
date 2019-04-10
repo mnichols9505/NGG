@@ -7,30 +7,32 @@ using Number_Guessing_Game.Classes;
 
 namespace Number_Guessing_Game.Classes
 {
-    class inputHandler
+    class InputHandler
     {
+
+        MainMenu mm = new MainMenu();
 
         public void inputValidator(string choice)
         {
-            
-            NumberGetter rm = new NumberGetter();
+
+            Game G = new Game();
 
             if (choice.Equals("Easy", StringComparison.InvariantCultureIgnoreCase))
             {
 
-                rm.gameStart(10);
+                G.gameStart(10);
 
             }
             else if(choice.Equals("medium", StringComparison.InvariantCultureIgnoreCase)) 
             {
 
-                rm.gameStart(50);
+                G.gameStart(50);
 
             }
             else if(choice.Equals("Hard", StringComparison.InvariantCultureIgnoreCase))
             {
 
-                rm.gameStart(100);
+                G.gameStart(100);
 
             }
             else if(choice.Equals("exit", StringComparison.InvariantCultureIgnoreCase))
@@ -42,13 +44,38 @@ namespace Number_Guessing_Game.Classes
             else
             {
 
-                MainMenu mm = new MainMenu();
                 mm.invalidInput();
 
             }
 
 
         }
+
+        public void EGValidator(string choice)
+        {
+
+            if (choice.Equals("yes", StringComparison.InvariantCultureIgnoreCase))
+            {
+
+                mm.Menu();
+
+            }
+            else if(choice.Equals("no", StringComparison.InvariantCultureIgnoreCase))
+            {
+
+
+
+            }
+            else
+            {
+
+
+
+            }
+
+        }
+
+        
 
     }
 }
